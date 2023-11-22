@@ -1,7 +1,7 @@
 import click
 from aocd import get_data, submit
 from importlib import import_module
-from recent_problem_saver import get_recent, day_to_module
+from .recent_problem_saver import get_recent, day_to_module
 
 @click.command
 @click.argument('part')
