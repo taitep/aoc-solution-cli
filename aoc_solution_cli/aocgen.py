@@ -15,3 +15,6 @@ def solution_a(data):
 def solution_b(data):
     pass
 ''')
+
+if __name__ == '__main__':
+    generate()
