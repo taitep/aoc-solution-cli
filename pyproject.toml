@@ -11,6 +11,10 @@ python = "^3.12"
 click = "^8.1.7"
 advent-of-code-data = "^2.0.1"
 
+[tool.poetry.scripts]
+aocgen = "aoc_solution_cli.aocgen:aocgen"
+aocrun = "aoc_solution_cli.aocrun:aocrun"
+
 
 [build-system]
 requires = ["poetry-core"]
