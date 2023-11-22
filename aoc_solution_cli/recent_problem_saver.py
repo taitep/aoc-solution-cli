@@ -1,7 +1,7 @@
-from collections import namedtuple
-from aocd import get_day_and_year
+import collections
+import aocd
 
-AoCDay = namedtuple('AoCDay', ['day', 'year'])
+AoCDay = collections.namedtuple('AoCDay', ['day', 'year'])
 
 def get_recent(day=None, year=None, file='.recent_problem'):
     try:
@@ -16,7 +16,7 @@ def get_recent(day=None, year=None, file='.recent_problem'):
     if not year: year = saved_year
 
     if not day or not year:
-        aocd_day, aocd_year = get_day_and_year()
+        aocd_day, aocd_year = aocd.get_day_and_year()
         if not day: day = aocd_day
         if not year: year = aocd_year
 
