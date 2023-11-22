@@ -7,8 +7,6 @@ def get_recent(day=None, year=None, file='.recent_problem'):
     try:
         with open(file, 'r') as f:
                 saved_year, saved_day = tuple([int(i) for i in f.read().strip().split(' ')])
-                if len(pair) != 2:
-                    print(f"File '{file}' is not formatted correctly")
     except FileNotFoundError:
         saved_day, saved_year = None, None
     
