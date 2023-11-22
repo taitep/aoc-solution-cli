@@ -1,5 +1,5 @@
 import click
-from recent_problem_saver import get_recent, day_to_module
+from .recent_problem_saver import get_recent, day_to_module
 
 @click.command
 @click.option('--day', type=int)
