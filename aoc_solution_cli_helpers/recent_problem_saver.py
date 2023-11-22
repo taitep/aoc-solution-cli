@@ -24,3 +24,6 @@ def get_recent(day=None, year=None, file='.recent_problem'):
             f.write(f"{day, year}")
     
     return AoCDay(day, year)
+
+
+day_to_module = lambda day, year: f'aoc_{year}_{day}'
