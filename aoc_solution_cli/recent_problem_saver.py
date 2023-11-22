@@ -15,10 +15,6 @@ def get_recent(day=None, year=None, file='.recent_problem'):
         if not day: day = savedday
         if not year: year = savedyear
 
-    if not day or not year:
-        print(f"No year/day was saved in '{file}'")
-        exit(1)
-
     if (day, year) != (savedday, savedyear):
         with open(file, 'w') as f:
             f.write(f"{day, year}")
