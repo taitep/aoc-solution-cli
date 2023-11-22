@@ -8,6 +8,7 @@ license = "LGPL-3.0-only"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+click = "^8.1.7"
 
 
 [build-system]
