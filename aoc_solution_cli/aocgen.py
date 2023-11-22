@@ -9,13 +9,9 @@ def generate(day, year):
     file = f"{day_to_module(day, year)}.py"
     with open(file, 'w') as f:
         f.write(f'''\
-from aoc_solution_cli import solution_pair
-
 def solution_a(data):
     pass
 
 def solution_b(data):
     pass
-
-cli = solution_pair(solution_a, solution_b, day={day}, year={year})
 ''')
