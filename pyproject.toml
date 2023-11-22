@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["taitep <arvid@h.se>"]
 readme = "README.md"
+license = "LGPL-3.0-only"
 
 [tool.poetry.dependencies]
 python = "^3.12"
