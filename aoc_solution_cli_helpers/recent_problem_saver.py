@@ -1,3 +1,7 @@
+from collections import namedtuple
+
+AoCDay = namedtuple('AoCDay', ['day', 'year'])
+
 def get_recent(day=None, year=None, file='.recent_problem'):
     try:
         with open(file, 'r') as f:
@@ -13,7 +17,10 @@ def get_recent(day=None, year=None, file='.recent_problem'):
 
     if not day or not year:
         print(f"No year/day was saved in '{file}'")
+        exit(1)
 
     if (day, year) != (savedday, savedyear):
         with open(file, 'w') as f:
             f.write(f"{day, year}")
+    
+    return AoCDay(day, year)
