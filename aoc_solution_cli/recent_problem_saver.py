@@ -1,21 +1,26 @@
 from collections import namedtuple
+from aocd import get_day_and_year
 
 AoCDay = namedtuple('AoCDay', ['day', 'year'])
 
 def get_recent(day=None, year=None, file='.recent_problem'):
     try:
         with open(file, 'r') as f:
-                savedyear, savedday = tuple([int(i) for i in f.read().strip().split(' ')])
+                saved_year, saved_day = tuple([int(i) for i in f.read().strip().split(' ')])
                 if len(pair) != 2:
                     print(f"File '{file}' is not formatted correctly")
     except FileNotFoundError:
-        savedday, savedyear = None, None
+        saved_day, saved_year = None, None
     
-    if not day or not year:
-        if not day: day = savedday
-        if not year: year = savedyear
+    if not day: day = saved_day
+    if not year: year = saved_year
 
-    if (day, year) != (savedday, savedyear):
+    if not day or not year:
+        aocd_day, aocd_year = get_day_and_year()
+        if not day: day = aocd_day
+        if not year: year = aocd_year
+
+    if (day, year) != (saved_day, saved_year):
         with open(file, 'w') as f:
             f.write(f"{day, year}")
     
