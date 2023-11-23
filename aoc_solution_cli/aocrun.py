@@ -17,8 +17,8 @@ def aocrun(part, day, year, submit_attempt):
     day, year = get_recent(day, year)
     try:
         module = import_module(day_to_module(day, year))
-    except ModuleNotFoundError:
-        print(f"The module with solutions was not found. To generate it, run 'aocgen'.")
+    except ModuleNotFoundError as e:
+        print(f"Error: {e}. The module with solutions was not found. To generate it, run 'aocgen'.")
         exit(1)
 
     solution_function = getattr(module, f'solution_{part}')
