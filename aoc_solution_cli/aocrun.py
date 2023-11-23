@@ -3,6 +3,10 @@ from aocd import get_data, submit
 from importlib import import_module
 from .recent_problem_saver import get_recent, day_to_module
 
+import os
+import sys
+sys.path.insert(0, os.curdir)
+
 @click.command
 @click.argument('part')
 @click.option('--day', type=int)
