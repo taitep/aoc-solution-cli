@@ -26,7 +26,7 @@ def aocrun(part, day, year, submit_attempt):
         exit(1)
 
     solution_function = getattr(module, f'solution_{part}')
-    answer = solution_function(get_data(day=day, year=year))
+    answer = solution_function(get_data(day=day, year=year).splitlines())
     print(f'Result: {answer}')
     if submit_attempt: submit(answer, day=day, year=year, part=part)
 
