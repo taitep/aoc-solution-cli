@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aoc-solution-cli"
-version = "0.1.0"
+version = "1.0.0"
 description = "CLI for handling AoC solutions"
 authors = ["taitep <arvid@h.se>"]
 readme = "README.md"
