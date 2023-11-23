@@ -20,7 +20,7 @@ def get_recent(day=None, year=None, file='.recent_problem'):
 
     if (day, year) != (saved_day, saved_year):
         with open(file, 'w') as f:
-            f.write(f"{day} {year}")
+            f.write(f"{year} {day}")
     
     return AoCDay(day, year)
 
