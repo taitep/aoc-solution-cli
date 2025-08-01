@@ -1,3 +1,8 @@
+# Copyright (C) taitep <taitep@taitep.se>
+#
+# This file is licensed under the GNU LGPL v3.
+# See <https://www.gnu.org/licenses/>
+
 import click
 from aocd import get_data, submit
 from importlib import import_module

@@ -1,3 +1,8 @@
+# Copyright (C) taitep <taitep@taitep.se>
+#
+# This file is licensed under the GNU LGPL v3.
+# See <https://www.gnu.org/licenses/>
+
 import collections
 import aocd
 
